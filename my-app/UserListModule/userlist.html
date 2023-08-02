@@ -1,0 +1,22 @@
+<!-- <div ng-controller="UserListController"> -->
+    <!-- <button ng-click="fetchUsers()">Fetch Users</button>
+    <div ng-repeat="user in userDetails">
+        <div class="card">
+            <img ng-src="{{ user.avatar_url }}" alt="{{ user.login }}">
+            <div class="card-content">
+                <span>{{ user.login }}</span>
+            </div>
+        </div>
+    </div> -->
+        <div ng-controller="UserListController">
+            <h1>User List</h1>
+            <div ng-repeat="user in userList">
+              <div class="card">
+                <img ng-src="{{ user.avatar_url }}" alt="{{ user.login }}">
+                <div class="card-content">
+                  <span>{{ user.login }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        

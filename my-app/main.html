@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <title>GitHub User List</title>
+  <link rel="stylesheet" href="Styles/token.css">
+  <link rel="stylesheet" href="Styles/userlist.css">
+</head>
+
+<body>
+  <div ng-controller="MainController">
+    <nav>
+      <a href="#/">Home</a>
+      <button ng-click="fetchUserList()">Fetch Users</button>
+    </nav>
+
+    <div ng-view ></div>
+
+    <div ng-if="!isTokenPresent && isUserListFetched">
+      <custom-user-list></custom-user-list>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+
+<script src="app.js"></script>
+<script src="TokenModule/tokencontroller.js"></script>
+<script src="TokenModule/tokendirective.js"></script>
+<script src="UserListModule/userlistcontroller.js"></script>
+<script src="UserListModule/userlistdirective.js"></script>
+
+</body>
+
+</html>
+
+
+
